@@ -3,12 +3,8 @@ import * as Print from 'expo-print';
 import { shareAsync } from 'expo-sharing';
 import { Platform } from 'react-native';
 import * as Sharing from 'expo-sharing';
-import { initialResume } from './form_component';
-import FormComponent from './form_component';
 
-
-
-export async function GeneratePDF(name: string) {
+export async function GeneratePDF() {
     const html = `
 <html>
   <head>
@@ -16,7 +12,7 @@ export async function GeneratePDF(name: string) {
   </head>
   <body style="text-align: center;">
     <h1 style="font-size: 50px; font-family: Helvetica Neue; font-weight: normal;">
-      Hello ${name}
+      Hello
     </h1>
     <img
       src="https://d30j33t1r58ioz.cloudfront.net/static/guides/sdk.png"

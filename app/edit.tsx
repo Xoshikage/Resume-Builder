@@ -1,27 +1,25 @@
-import { Text, View, Button } from "react-native";
-import { useLocalSearchParams, useRouter, Stack } from "expo-router"
-import { useState } from "react";
+import { View, Text, Button, ScrollView } from "react-native";
+import { useRouter } from "expo-router";
 import FormComponent from "./components/form_component";
 
 export default function Index() {
     const router = useRouter();
 
-    const params = useLocalSearchParams<{ name?: string }>();
-
     return (
-        <View
-            style={{
-                flex: 1,
-                justifyContent: "flex-start",
-                alignItems: "flex-start",
-            }}
+        <ScrollView
+            style={{ flex: 1 }}
+            contentContainerStyle={{ padding: 20 }}
         >
-            <Text>Build your Resume {params.name}</Text>
+            <Text style={{ fontSize: 24, marginBottom: 12 }}>
+                All Beautiful Resumes Start Here:
+            </Text>
+
             <Button
                 title="Go Back Home"
-                onPress={() => router.navigate('/')}
+                onPress={() => router.navigate("/")}
             />
-            <FormComponent></FormComponent>
-        </View>
+
+            <FormComponent />
+        </ScrollView>
     );
 }

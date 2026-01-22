@@ -20,10 +20,6 @@ export default function Index() {
         title="Build Resume Here"
         onPress={() => router.navigate('/edit')}
       />
-      <Link href={{ pathname: '/edit', params: { name } }}>
-        Fart
-      </Link>
-
     </View>
   );
 }

@@ -21,16 +21,15 @@ export default function ExportScreen({ }) {
                 alignItems: "flex-start",
             }}
         >
-            <Text>Here is your FART</Text>
+            <Text>Here is your Resume</Text>
             <Button
                 title="Download PDF"
-                onPress={() => GeneratePDF(params.name)}
+                onPress={() => GeneratePDF()}
             />
             <Button
                 title="Back to Home Screen"
                 onPress={() => router.navigate('/')}
             />
-
         </View>
     );
 }
